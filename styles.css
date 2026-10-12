@@ -131,9 +131,11 @@ a[href^="tel"]:not(.btn):not(.mbar a){display:inline-flex;align-items:center;min
   .hero__img{object-position:70% 60%}
   .hero__copy{width:90vw;margin:0 auto}
 }
-@media (max-width:480px){
-  .hero .btns{display:flex;flex-wrap:nowrap;gap:.6rem;margin-top:1rem}
+@media (max-width:640px){
+  .hero .btns{display:flex;flex-wrap:nowrap;gap:.6rem;margin-top:1rem;width:100%}
   .hero .btns .btn{flex:1 1 0;min-width:0;font-size:1.25rem;min-height:52px;padding:.2em .4em}
+}
+@media (max-width:480px){
   .hero h1{font-size:4rem}
   .hero .kicker{font-size:.875rem;margin-bottom:.3rem}
   .status{margin-top:.6rem}

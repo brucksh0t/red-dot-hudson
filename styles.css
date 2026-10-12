@@ -25,7 +25,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #ffd23f;outline-offset:3px}
 .note--light{color:#fff;font-size:1rem}
 /* buttons */
 .btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.2em 1.1em;font-family:var(--disp);font-weight:800;font-size:1.6rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;border:2px solid transparent;border-radius:4px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.2em 1.1em;font-family:var(--disp);font-weight:800;font-size:1.6rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;border:2px solid transparent;border-radius:4px;cursor:pointer;transition:background .2s,color .2s}
 .btn:hover,.btn:focus,.btn:focus-visible,.btn:active{text-decoration:none}
 .btn--lg{min-height:60px;font-size:2rem;padding:.2em 1.2em}
 .btn--red{background:var(--red);color:#fff}.btn--red:hover{background:var(--red-d)}
@@ -126,8 +126,19 @@ a[href^="tel"]:not(.btn):not(.mbar a){display:inline-flex;align-items:center;min
   .mbar a{flex:1 1 0;min-width:0;height:52px;display:flex;align-items:center;justify-content:center;border:2px solid #fffaf2;border-radius:4px;color:#fffaf2;text-decoration:none;font-family:var(--disp);font-weight:800;font-size:14px;letter-spacing:.06em;white-space:nowrap}
   .mbar a:hover,.mbar a:focus{text-decoration:none}
   .mbar .mbar__res{flex:0 0 36%;background:#d4232b;border-color:#d4232b;color:#fff}
-  .hero__in{flex-direction:column;gap:1.6rem;padding:0 0 2.5rem;width:100%}
-  .hero__frame{width:100%;aspect-ratio:auto;height:min(480px,60vh);border:0;box-shadow:none}
+  .hero__in{flex-direction:column;align-items:stretch;gap:1rem;padding:0 0 2.5rem;width:100%}
+  .hero__frame{width:100%;max-width:504px;margin:0 auto;aspect-ratio:auto;height:220px;border:0;box-shadow:none}
   .hero__img{object-position:70% 60%}
   .hero__copy{width:90vw;margin:0 auto}
 }
+@media (max-width:480px){
+  .hero .btns{display:flex;flex-wrap:nowrap;gap:.6rem;margin-top:1rem}
+  .hero .btns .btn{flex:1 1 0;min-width:0;font-size:1.25rem;min-height:52px;padding:.2em .4em}
+  .hero h1{font-size:4rem}
+  .hero .kicker{font-size:.875rem;margin-bottom:.3rem}
+  .status{margin-top:.6rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1::after{animation:dotIn .6s cubic-bezier(.215,.61,.355,1) both}
+}
+@keyframes dotIn{from{transform:scale(0)}to{transform:scale(1)}}

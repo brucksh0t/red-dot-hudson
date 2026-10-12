@@ -15,7 +15,6 @@
   }
   function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;}
   function label(s){return s===BRUNCH?'Brunch':'Dinner';}
-  var SHORT=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   function fmtShort(m){var h=Math.floor(m/60),mm=m%60;h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'');}
   function next(n){for(var k=1;k<=7;k++){var d=(n.day+k)%7;if(HOURS[d].length)return {d:d,s:HOURS[d][0]};}}
   function compute(n){
@@ -27,7 +26,7 @@
       if(n.min<s[0]) return {cls:'is-later',text:'Opens '+fmt(s[0])+(s===DINNER?' tonight':' today')+' · '+label(s)+' until '+fmtShort(s[1])};}
     var x=next(n);
     if(n.day===3||n.day===4) return {cls:'is-closed',unposted:true,text:'Not on the posted hours today · Next: '+NAMES[x.d]+' '+label(x.s).toLowerCase()+' '+fmt(x.s[0])};
-    return {cls:'is-closed',text:'Closed now · Next: '+SHORT[x.d]+' '+label(x.s).toLowerCase()+' '+fmt(x.s[0])};
+    return {cls:'is-closed',text:'Closed now · Next: '+NAMES[x.d]+' '+label(x.s).toLowerCase()+' '+fmt(x.s[0])};
   }
   var n=nyNow(),r=compute(n),el=document.querySelector('[data-status]');
   if(el){el.classList.add(r.cls);el.querySelector('[data-status-text]').textContent=r.text;}

@@ -8,29 +8,36 @@
 <meta name="theme-color" content="#d4232b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p class="flag" role="note"><strong>Concept redesign preview.</strong> Not affiliated with or endorsed by Red Dot Restaurant &amp; Bar. Hours and menu as posted on reddothudson.net.</p>
+<p class="flag" role="note">Concept preview · not affiliated with Red Dot</p>
 
 <header class="nav">
   <a class="brand" href="#top" aria-label="Red Dot home"><span class="brand__dot" aria-hidden="true"></span><span>RED DOT</span></a>
   <nav aria-label="Main">
-    <a href="#menu">Menu</a><a href="#events">Events</a><a href="#parties">Parties</a><a href="#reserve">Reserve</a><a href="#visit">Visit</a>
+    <a href="#menu">Menu</a><a href="#events">Events</a><a href="#parties">Parties</a><a href="#visit">Visit</a>
   </nav>
+  <a class="btn btn--red nav__cta" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
 </header>
+<nav class="strip-nav" aria-label="Sections"><a href="#menu">MENU</a><a href="#events">EVENTS</a><a href="#parties">PARTIES</a><a href="#visit">VISIT</a></nav>
 
 <main id="top">
 <section class="hero" aria-labelledby="tonight-h">
-  <img class="hero__img" src="img/bar.jpg" alt="The bar at Red Dot: a long wooden counter with yellow stools, bottles on the back shelves, warm low light." fetchpriority="high">
-  <div class="hero__shade"></div>
+  <div class="hero__in">
+  <figure class="hero__frame"><picture>
+    <source type="image/webp" srcset="img/bar-frame-504.webp 504w" sizes="(max-width:899px) 100vw, 400px">
+    <img class="hero__img" src="img/bar-frame-504.jpg" width="504" height="630" alt="The bar at Red Dot: a wooden counter with yellow stools, bottles on the back shelves, warm low light." fetchpriority="high">
+  </picture></figure>
   <div class="hero__copy">
     <p class="kicker">321 Warren Street · Hudson, NY · Since Bastille Day 1999</p>
     <h1 id="tonight-h"><span class="small">Tonight at</span> Red Dot</h1>
     <p class="status" data-status aria-live="polite"><span class="pip" aria-hidden="true"></span><span data-status-text>Dinner Fri–Tue 5–9:30 PM · Brunch Sat–Sun 11 AM–3 PM</span></p>
     <p class="status__sub" data-status-sub>Wed &amp; Thu closed (implied by posted hours). Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a></p>
-    <div class="btns"><a class="btn btn--red btn--lg" href="#plan">PLAN YOUR VISIT</a><a class="btn btn--ghost btn--lg" href="#menu">MENU</a></div>
+    <div class="btns"><a class="btn btn--red btn--lg" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE A TABLE</a><a class="btn btn--ghost btn--lg" href="#menu">SEE THE MENU</a></div>
+  </div>
   </div>
 </section>
 
@@ -39,9 +46,9 @@
     <h2 id="plan-h" class="disp">Plan your visit</h2>
     <div class="btns btns--grid">
       <a class="btn btn--red" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
-      <a class="btn btn--ink" href="tel:+15188283657">CALL</a>
-      <a class="btn btn--ink" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar&amp;destination_place_id=ChIJx9mY3aKV3YkRz1U7vthuwDE" target="_blank" rel="noopener">DIRECTIONS</a>
-      <a class="btn btn--ink" href="#menu">MENU</a>
+      <a class="btn btn--ghost-dark" href="tel:+15188283657">CALL</a>
+      <a class="btn btn--ghost-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar&amp;destination_place_id=ChIJx9mY3aKV3YkRz1U7vthuwDE" target="_blank" rel="noopener">DIRECTIONS</a>
+      <a class="btn btn--ghost-dark" href="#menu">MENU</a>
     </div>
     <p class="note">Pickup: no online ordering. Call <a href="tel:+15188283657">(518) 828-3657</a>.</p>
   </div>
@@ -81,7 +88,7 @@
       <img src="img/french-toast.jpg" alt="Challah French toast with berries, whipped cream and maple syrup." loading="lazy">
       <img src="img/salmon.jpg" alt="Seared salmon over chickpeas and sautéed spinach." loading="lazy">
     </div>
-    <div class="btns"><a class="btn btn--red" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-food-menu" target="_blank" rel="noopener">FULL MENU</a><a class="btn btn--ghost-dark" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-drink-menu" target="_blank" rel="noopener">DRINKS</a></div>
+    <div class="btns"><a class="btn btn--ghost-dark" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-food-menu" target="_blank" rel="noopener">FULL MENU</a><a class="btn btn--ghost-dark" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-drink-menu" target="_blank" rel="noopener">DRINKS</a></div>
   </div>
 </section>
 
@@ -136,8 +143,8 @@
     <div>
       <h2 id="visit-h" class="disp">Visit</h2>
       <address>Red Dot Restaurant &amp; Bar<br>321 Warren Street<br>Hudson, NY 12534</address>
-      <p><a href="tel:+15188283657">(518) 828-3657</a></p>
-      <div class="btns"><a class="btn btn--red" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar&amp;destination_place_id=ChIJx9mY3aKV3YkRz1U7vthuwDE" target="_blank" rel="noopener">DIRECTIONS</a></div>
+      <p><a class="tel-big" href="tel:+15188283657">(518) 828-3657</a></p>
+      <div class="btns"><a class="btn btn--ghost-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar&amp;destination_place_id=ChIJx9mY3aKV3YkRz1U7vthuwDE" target="_blank" rel="noopener">DIRECTIONS</a></div>
     </div>
     <div>
       <h3 class="disp disp--sm">Hours</h3>
@@ -145,14 +152,14 @@
         <tbody>
           <tr data-day="1"><th>Monday</th><td>Dinner 5–9:30 PM</td></tr>
           <tr data-day="2"><th>Tuesday</th><td>Dinner 5–9:30 PM</td></tr>
-          <tr data-day="3"><th>Wednesday</th><td>Closed*</td></tr>
-          <tr data-day="4"><th>Thursday</th><td>Closed*</td></tr>
+          <tr data-day="3"><th>Wednesday</th><td>Not posted*</td></tr>
+          <tr data-day="4"><th>Thursday</th><td>Not posted*</td></tr>
           <tr data-day="5"><th>Friday</th><td>Dinner 5–9:30 PM</td></tr>
           <tr data-day="6"><th>Saturday</th><td>Brunch 11 AM–3 PM<br>Dinner 5–9:30 PM</td></tr>
           <tr data-day="0"><th>Sunday</th><td>Brunch 11 AM–3 PM<br>Dinner 5–9:30 PM</td></tr>
         </tbody>
       </table>
-      <p class="note">As posted on reddothudson.net: "Dinner Hours 5pm-9:30 Friday to Tuesday; Brunch Hours Sat. and Sun. 11am-3pm." *Wed/Thu closed is implied, not stated. Holiday hours not posted. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p>
+      <p class="note">As posted on reddothudson.net: "Dinner Hours 5pm-9:30 Friday to Tuesday; Brunch Hours Sat. and Sun. 11am-3pm." *Wed/Thu hours aren't posted. Holiday hours not posted. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p>
     </div>
   </div>
 </section>
@@ -163,6 +170,9 @@
   <p><a href="https://www.instagram.com/reddothudson" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/310465430424" target="_blank" rel="noopener">Facebook</a> · <a href="https://reddothudson.net/" target="_blank" rel="noopener">Current site</a></p>
   <p class="small">Concept redesign preview. Not affiliated with Red Dot Restaurant &amp; Bar. Photos from Red Dot's own website gallery.</p>
 </footer>
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+15188283657">CALL</a><a href="#menu">MENU</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar&amp;destination_place_id=ChIJx9mY3aKV3YkRz1U7vthuwDE" target="_blank" rel="noopener">DIRECTIONS</a><a class="mbar__res" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
+</nav>
 <script src="main.js"></script>
 </body>
 </html>
